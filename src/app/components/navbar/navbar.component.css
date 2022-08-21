@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .ml20 {
+    margin-left: 20px;
+  }
+
+  
+ .mr20 {
+    margin-right: 20px;
+  }
+  
+
+  .bg{
+    background: #17a2b8;
+    color: rgba(0,0,0,.87);
+
+  }

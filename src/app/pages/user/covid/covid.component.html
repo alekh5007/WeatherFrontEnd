@@ -1,0 +1,18 @@
+
+<table>
+    <tr>
+      <th>Country</th>
+      <th>TotalCases</th>
+      <th>Deaths</th>
+      <th>NewConfirmed</th>
+    </tr>
+
+    <tr *ngFor="let cowin of covid">
+      <td>{{cowin.Country}}</td>
+      <td>{{cowin.TotalConfirmed}}</td>
+      <td>{{cowin.TotalDeaths}}</td>
+      <td>{{cowin.NewConfirmed}}</td>
+      
+    </tr>
+  
+  </table>

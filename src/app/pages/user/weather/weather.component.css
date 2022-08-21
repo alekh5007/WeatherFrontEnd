@@ -1,0 +1,27 @@
+.w100{
+
+    width: 100%;
+    
+    }
+    
+    .example-card {
+        max-width: 400px;
+      }
+      .cen{
+        text-align: center;
+      }
+      .text-center{
+          text-align: center;
+      }
+
+      img {
+    
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+      .full-width{
+        width: 100%;
+      }
+    
+      

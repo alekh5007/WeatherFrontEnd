@@ -1,0 +1,17 @@
+img {
+    border-radius: 10%;
+    border: 1px solid #ddd;
+    
+    padding: 5px;
+    width: 100px;
+  }
+  .cen{
+      text-align: justify;
+  }
+
+  .full-width{
+      width: 100%;
+  }
+  .ml{
+      margin-left: 2%;
+  }

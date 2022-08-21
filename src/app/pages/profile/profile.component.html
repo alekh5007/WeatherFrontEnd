@@ -1,0 +1,44 @@
+<mat-card>
+    <h3 class="text-center">Your Details</h3>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+
+                <div class="container text-center">
+                    <img src="https://t4.ftcdn.net/jpg/02/30/31/15/360_F_230311582_UvB0ZYoJNKW0NJwxnPKZ2FtvXJWAZJ8t.jpg"
+                    alt=""
+                    class="profile-img"
+                    />
+                   
+                    <h1 class="mt-20">{{user.first_name}} {{user.last_name}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+
+                        <table class="table text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone No</td>
+                                <td>{{user.phone_no}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{user.email}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-card class="cod">
+    <mat-action-list>
+       <div mat-subheader>MENU</div>
+        
+        <button mat-list-item [routerLink]="'/admin/'"> 
+            <mat-icon mat-list-icon>home</mat-icon>Home
+        </button>
+
+        <button mat-list-item  [routerLink]="'/admin/profile'" > 
+            <mat-icon mat-list-icon>face</mat-icon>Profile
+        </button>
+
+        <button mat-list-item (click)="logout()"> 
+            <mat-icon mat-list-icon>auto_delete</mat-icon>Logout
+        </button>
+      </mat-action-list>
+
+</mat-card>

@@ -1,0 +1,51 @@
+<div class="bootstrap-wrapper">
+	<div class="container">
+		<div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                    <img src="../../../assets/logo.jpeg" >
+                </div>
+                   <h1 class="text-center">Welcome To Login</h1>
+                   
+                       <form #loginForm="ngForm" (ngSubmit)="formsubmit()">       
+                                       <!-- Username -->
+                    <mat-form-field  class="full-width" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input 
+                    [(ngModel)]="user.username" name="username"  #userName="ngModel"  minlength="5" maxlength="12"  required autocomplete="off"
+                    matInput placeholder="Enter username here">
+
+                    <mat-error *ngIf="userName.errors?.['required']">Username is Required</mat-error>
+                    <mat-error *ngIf="userName.errors?.minlength">Username must contain atleast 5 characters</mat-error>
+                    </mat-form-field>   
+
+                       <!-- password -->
+                    <mat-form-field  class="full-width" appearance="outline">
+                        <mat-label>User Password</mat-label>
+                        <input 
+                        [(ngModel)]="user.password" name="password"  #passwordVar="ngModel" minlength="5" maxlength="12" required autocomplete="off"
+                        type="password" matInput placeholder="Enter Password here">
+
+                        <mat-error *ngIf="passwordVar.errors?.required">Password is Required</mat-error>
+                            
+                        <mat-error *ngIf="passwordVar.errors?.minlength">Password must contain atleast 5 characters</mat-error>
+                          
+                        <mat-error *ngIf="passwordVar.errors?.maxlength">Password must contain atmost 12 characters</mat-error>
+                        </mat-form-field>
+                  
+                       
+
+                                <div class="container text-center">
+                                    <button type="submit"[disabled]="!loginForm.valid"  mat-raised-button color="primary">Submit</button>
+                                    <button type="reset" mat-button class="ml" color="accent">RESET</button>
+                                </div>
+
+                            </form>
+                        </mat-card> 
+                        
+            </div>
+        </div>
+	</div>
+</div>
+

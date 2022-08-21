@@ -1,0 +1,36 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+              <mat-card>
+              <div class="container text-center">
+                <img src="../../../assets/logo.jpeg" alt="">
+             </div>
+                <h1 class="">Welcome to Weather Report</h1>
+                <!-- <button mat-raised-button color="accent">Home</button> -->
+                <form (ngSubmit)="logindataa()" method="POST">
+                 
+                    <mat-form-field appearance="fill" class="w100">
+                        <mat-label>Select city</mat-label>
+                        <mat-select  name="category"  [(ngModel)]="loginn.city">
+                          <mat-option *ngFor="let c of categories" [value]="c.title">
+                            {{c.title}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>   
+    
+                      <button mat-raised-button color="accent" (click)="btnClickk(); " class="text-center" >Add</button>
+                    
+                    </form>
+
+              
+
+                    
+                  </mat-card>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

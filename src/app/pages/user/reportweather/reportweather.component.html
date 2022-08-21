@@ -1,0 +1,38 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt10">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 ">
+                <!-- <h1>Welcome to Weather Report</h1> -->
+               
+                
+               
+               
+                <mat-card class="example-card text-centers sdd">
+                    
+                     <div *ngIf="report.isDay">
+                        <img mat-card-image src="/assets/images/day2.jpg" alt="Photo of a Shiba Inu">
+                    </div>
+                    <div  *ngIf="!report.isDay">
+                        <img mat-card-image src="/assets/images/night.svg" alt="Photo of a Shiba Inu">
+                    </div> 
+                    
+                    <mat-card-content class="sdd">
+                     
+                        <h1>{{report.city}}</h1>
+                        <h1 class=""> {{report.temp_celcius}} °C</h1>
+                        <h1 class=""> {{report.temp_min}} / {{report.temp_max}}</h1>
+                        <h1 class=""> Feels Like :{{report.temp_feels_like}}</h1>
+                        <h1 class=""> {{report.env}}</h1> 
+                    </mat-card-content>
+                   
+                    <mat-card-actions>
+                        <button mat-button routerLink="/weather">Go Back</button>
+                        <!-- <button type="hidden" mat-button>SHARE</button> -->
+                      </mat-card-actions>
+                  </mat-card>
+                
+
+            </div>
+        </div>
+    </div>
+</div>

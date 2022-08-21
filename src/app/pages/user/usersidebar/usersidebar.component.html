@@ -1,0 +1,31 @@
+<mat-card class="cod">
+    <mat-action-list>
+       <div mat-subheader>MENU</div>
+        
+        <button mat-list-item [routerLink]="'/user-dash/'"> 
+            <mat-icon mat-list-icon>home</mat-icon>Home
+        </button>
+
+        <button mat-list-item  [routerLink]="'/user-dash/profile'" > 
+            <mat-icon mat-list-icon>face</mat-icon>Profile
+        </button>
+
+        <button mat-list-item   [routerLink]="'/user-dash/covid'" > 
+            <mat-icon mat-list-icon>coronavirus</mat-icon>Covid Report
+        </button>
+
+        <button mat-list-item    [routerLink]="'/user-dash/weather'" > 
+            <mat-icon mat-list-icon>nights_stay</mat-icon>Weather
+        </button>
+
+        <button mat-list-item    [routerLink]="'/user-dash/contact'" > 
+            <mat-icon> my_location</mat-icon>Contact us
+        </button>
+
+
+        <button mat-list-item (click)="logout()"> 
+            <mat-icon mat-list-icon>auto_delete</mat-icon>Logout
+        </button>
+      </mat-action-list>
+
+</mat-card>

@@ -1,0 +1,90 @@
+<div class="bootstrap-wrapper">
+	<div class="container">
+		<div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>       
+                  <div class="container text-center">
+                    <img src="../../../assets/logo.jpeg" >
+                </div>
+                   <h1 class="text-center">Welcome To Registration</h1>
+                   
+                       <form #signForm="ngForm" (ngSubmit)="formsubmit()">       
+                                       <!-- Username -->
+                    <mat-form-field  class="full-width" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input 
+                    [(ngModel)]="user.username" name="username" #userName="ngModel"  minlength="5" maxlength="12" required autocomplete="off"
+                    matInput placeholder="Enter username here">
+
+                    <mat-error *ngIf="userName.errors?.['required']">Username is Required</mat-error>
+                    <mat-error *ngIf="userName.errors?.minlength">Username must contain atleast 5 characters</mat-error>
+                    </mat-form-field>   
+
+                    
+                   <!-- first name -->
+                        <mat-form-field  class="full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input 
+                            [(ngModel)]="user.first_name" name="first_name" #firstName="ngModel"  minlength="5"   required autocomplete="off"
+                             matInput placeholder="Enter firstname here">
+
+                             <mat-error *ngIf="firstName.errors?.['required']">firstName is Required</mat-error>
+                             <mat-error *ngIf="firstName.errors?.minlength">firstName must contain atleast 5 characters</mat-error>
+                            </mat-form-field>
+ 
+                            <!-- last name -->
+                            <mat-form-field  class="full-width" appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input  
+                                [(ngModel)]="user.last_name" name="last_name" #lastName="ngModel"  minlength="5"   required autocomplete="off"
+                                matInput placeholder="Enter lastname here">
+
+                                <mat-error *ngIf="lastName.errors?.['required']">lastName is Required</mat-error>
+                                <mat-error *ngIf="lastName.errors?.minlength">lastName must contain atleast 5 characters</mat-error>
+                                </mat-form-field>
+
+                                <!-- Email  -->
+                            <mat-form-field  class="full-width" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input 
+                                [(ngModel)]="user.email" name="email"  #eMail="ngModel"  minlength="5"   required autocomplete="off"
+                                type="email" matInput placeholder="Enter Email here">
+
+                                <mat-error *ngIf="eMail.errors?.['required']">Email is Required</mat-error>
+                                <mat-error *ngIf="eMail.errors?.minlength">Email must contain atleast 5 characters</mat-error>
+                                </mat-form-field>
+                  
+                                 <!-- Phone no  -->
+                            <mat-form-field  class="full-width" appearance="outline">
+                                <mat-label>Phone no</mat-label>
+                                <input
+                                [(ngModel)]="user.phone_no" name="phone_no"  #Phone="ngModel"  minlength="10"   required autocomplete="off"
+                                type="number" matInput placeholder="Enter  Phone no here">
+
+                                <mat-error *ngIf="Phone.errors?.['required']">Phone is Required</mat-error>
+                                <mat-error *ngIf="Phone.errors?.minlength">Phone must contain  10 characters</mat-error>
+                                </mat-form-field>
+
+                                   <!-- password -->
+                             <mat-form-field  class="full-width" appearance="outline">
+                                <mat-label>User Password</mat-label>
+                              <input 
+                                   [(ngModel)]="user.password" name="password" #Password="ngModel"  minlength="6"   required autocomplete="off"
+                               type="password" matInput placeholder="Enter Password here">
+
+                               <mat-error *ngIf="Password.errors?.['required']">Password is Required</mat-error>
+                               <mat-error *ngIf="Password.errors?.minlength">Password must contain atleast 6 characters</mat-error>
+                        </mat-form-field>
+
+                                <div class="container text-center">
+                                    <button type="submit" [disabled]="!signForm.valid" mat-raised-button color="primary">Submit</button>
+                                    <button type="reset" mat-button class="ml" color="accent">RESET</button>
+                                </div>
+
+                            </form>
+                        </mat-card>
+
+            </div>
+        </div>
+	</div>
+</div>
